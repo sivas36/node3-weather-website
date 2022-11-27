@@ -5,8 +5,6 @@ function forecast(lat, lon, callback) {
   request({ url: url, json: true }, (error, response) => {
     if (error) {
       callback("Connect to network", undefined);
-    } else if (body.error) {
-      callback("Cant able to find temp", undefined);
     } else {
       callback(undefined, response.body.weather[0].description);
     }

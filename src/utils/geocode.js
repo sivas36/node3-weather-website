@@ -10,9 +10,9 @@ const geocode = (address, callback) => {
       callback("Unable to find location try another search", undefined);
     } else {
       callback(undefined, {
-        latitude: response.body.coord.lat,
-        longtitude: response.body.coord.lon,
-        location: response.body.name,
+        latitude: body.coord.lat,
+        longtitude: body.coord.lon,
+        location: body.name,
       });
     }
   });
